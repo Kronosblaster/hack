@@ -1,0 +1,30 @@
+.logout{
+  position: relative;
+  left:300px;
+  top:25px;
+}
+
+.box{
+  background-color: aquamarine;
+  position: relative;
+  left:35%;
+  top:300px;
+  height:60%;
+  width:700px;
+  padding: 1cm;
+  border-radius: 10px;
+}
+#highlighted{
+  background-blend-mode: hard-light;
+  background-color: cadetblue;
+  
+}
+#med_table{
+  border-radius: 10px;
+  border-spacing: collapse;
+  border:none;
+}
+
+body{
+  background-image: url("bg.jpg");
+}
