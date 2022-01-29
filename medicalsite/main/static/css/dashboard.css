@@ -9,6 +9,7 @@ body, html {
 }
 
 .logout{
+  display: inline;
   position: relative;
   left:300px;
   top:25px;
@@ -24,7 +25,7 @@ body, html {
   padding: 1cm;
   border-radius: 10px;
   backdrop-filter: blur(10px);
-    filter: hue-rotate(10deg);
+  filter: hue-rotate(10deg);
 }
 #highlighted{
   background-blend-mode: hard-light;
@@ -39,4 +40,28 @@ body, html {
 
 body{
   background-image: url("bg.jpg");
+}
+.newMed_button{
+  display: inline;
+  left:100px;
+  color: #888888;
+  position: relative;
+}
+
+.topbox{
+  display: inline;
+}
+
+#chat{
+  position: absolute;
+  background-image: url('robot.svg');
+  border: 2px solid aquamarine;
+  border-radius: 1000px;
+  padding: 4px;
+  height:120px;
+  width: 120px;
+  left:44.7%;
+  top:10%;
+  z-index: 10;
+
 }

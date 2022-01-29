@@ -15,6 +15,7 @@ from urllib.parse import parse_qs
 from django.forms import ModelForm
 
 
+
 def register(request):
     return render(request=request, template_name='register.html')
 

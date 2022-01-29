@@ -12,6 +12,7 @@
     left: 32%;
     top:35%;
     backdrop-filter: blur(10px); 
+    
 }
 
 .doc{
@@ -19,4 +20,11 @@
     height: 100%;
     width: 100%;
     background-image:url("bg.jpg");
+}
+#note{
+    filter: hue-rotate(40deg);
+    border-radius: 10px;
+    padding: 10px;
+    border-style:ridge;
+    border-width: medium;
 }
