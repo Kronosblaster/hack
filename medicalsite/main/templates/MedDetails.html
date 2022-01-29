@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function doc(){
+            console.log("hello")
+            id=document.getElementById('session').innerHTML
+            add=document.getElementById('add')
+            add.id=id+"_add"
+            console.log(add.id)
+            add.href="../../alljobs?id="+add.id
+            }
+        </script>
+        <div style="display:none" id='session' name="session">{{id}}</div>
+    </head>
+    
+    <body onload="doc()">
+        
+	
+		<h1>Hello {{name}},these are the conditon details:</h1>
+		<a href="./../../logout">Logout</a>
+		<a href="./../../">Dashboard</a>
+		<br><br>
+		 
+        <label for="title" >{{title}}</label>
+        <label for="title" id="tile"></label>
+			
+		<div class="form-container" style="border: 2px solid black;width: 400px;" >
+         <form action="">
+
+            <label for="desc">Description:
+                  <p>{{description}}</p>
+                </label>
+			<label for="desc" id='desc'></label>
+            <br><br>
+			
+			
+			<br><br>
+          </form>
+		</div>
+		
+    </body>
+</html>

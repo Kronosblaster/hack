@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<div style="display:none" id="email_session" name="email_session">{{email}}</div>
+<html>
+
+<head>
+  <title>Hello {{name}}</title>
+  <style>
+    #newJob_button{
+      position: absolute;
+      top:90px;
+      left:500px;
+    }
+    .logout{
+      position: absolute;
+      top:90px;
+      left:440px;
+    }
+  
+  </style>
+
+  <script type="text/javascript">
+
+    const url1='getMedData/';
+    
+    function dataGet_User(url,table_name){
+    data=fetch(url).then(data=>{return data.json()}).then(
+    data=>{
+      console.log(data)
+       var table=document.getElementById(table_name)
+        for(i=0;i<data.length;i++){
+          
+          row = document.createElement("tr");
+          cellA = document.createElement("td");
+          cellL=document.createElement("td");
+          var id=data[i].med_id
+
+          char1=document.createElement("text");
+          char1.innerHTML=" | "
+
+          view=document.createElement("a");
+          view.innerHTML="View"
+          view.id=id+"_view"
+          view.href="myMed?id="+view.id
+
+          remove=document.createElement("a");
+          remove.innerHTML="Remove"
+          remove.id=id+"_remove"
+          remove.href="myMed?id="+remove.id
+
+          cellL.appendChild(view)
+          cellL.appendChild(char1)
+          cellL.appendChild(remove)
+
+          cellA.innerHTML=data[i].title
+          
+          table.appendChild(row);
+          row.appendChild(cellA);
+          row.appendChild(cellL);
+          
+           }
+
+          } )
+            }
+    
+    
+    dataGet_User(url1,"med_table")
+  
+  </script>
+</head>
+
+
+
+<body>
+  <div class="box">
+  <h1>Hello {{name}}!</h1>
+  <div id="med"></div>
+  <h1>Registered medical conditions:</h1>
+      <table border="1" width="600" id="med_table">
+          <tr>
+          <td>View</td>
+          <td>Action</td>
+          </tr>
+          <tr>
+            
+          </tr>
+      </table>
+
+      <div class="logout"><a href="logout">Logout</a></div>
+      <button onclick="window.location.href='newMed'" id="newMed_button">
+        New conditon
+      </button>
+
+      <div class="message">{% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}</div>
+      </div>
+</body>
+
+</html>
