@@ -2,33 +2,27 @@
 
 <html>
     <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/MedDetails.css' %}">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <meta charset="utf-8">
-        <script type="text/javascript">
-            function doc(){
-            console.log("hello")
-            id=document.getElementById('session').innerHTML
-            add=document.getElementById('add')
-            add.id=id+"_add"
-            console.log(add.id)
-            add.href="../../alljobs?id="+add.id
-            }
-        </script>
+     
         <div style="display:none" id='session' name="session">{{id}}</div>
     </head>
     
-    <body onload="doc()">
+    <body>
         
-	
-		<h1>Hello {{name}},these are the conditon details:</h1>
+	<div class="doc">
+		
+			
+		<div class="form-container">
+            <p class="titles">Hello {{name}},these are the conditon details:</p>
 		<a href="./../../logout">Logout</a>
 		<a href="./../../">Dashboard</a>
 		<br><br>
 		 
-        <label for="title" >{{title}}</label>
+        <label for="title" >Title: {{title}}</label>
         <label for="title" id="tile"></label>
-			
-		<div class="form-container" style="border: 2px solid black;width: 400px;" >
          <form action="">
 
             <label for="desc">Description:
@@ -41,6 +35,6 @@
 			<br><br>
           </form>
 		</div>
-		
+	</div>
     </body>
 </html>

@@ -1,0 +1,22 @@
+.titles{
+    font-size: large;
+}
+
+.form-container{
+    box-shadow: 0px 1px 2px 2px #888888; 
+    padding: 30px;
+    font-weight: 500;
+    width: 600px;
+    border-radius: 10px;
+    position: relative;
+    left: 32%;
+    top:35%;
+    backdrop-filter: blur(10px); 
+}
+
+.doc{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image:url("bg.jpg");
+}
