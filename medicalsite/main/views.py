@@ -125,3 +125,9 @@ def remove(request):
 def view(request):
     med=Medical_entries.objects.values().filter(med_id=request.session['med'])
     return render(request,'MedDetails.html',{'id':request.session['id'],'title':med[0]['title'],'name':request.session['cur_user'],"description":med[0]['description']})
+
+@csrf_exempt
+def record(request):
+    if request.method == 'POST':
+        print(request.POST['0']['data'])
+    return HttpResponse(json.dumps(request.POST))

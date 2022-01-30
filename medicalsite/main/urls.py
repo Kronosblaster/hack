@@ -14,4 +14,5 @@ urlpatterns = [
     path('dashboard/myMed/',views.my_Med,name="myMed"),
     path('dashboard/myMed/view/',views.view,name="view"),
     path('dashboard/myMed/remove',views.remove,name="remove"),
+    path('dashboard/record/',views.record,name="record")
 ]
